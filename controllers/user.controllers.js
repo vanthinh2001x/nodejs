@@ -26,6 +26,20 @@ module.exports.get = (req,res)=>{
 };
 module.exports.postCreate =(req,res)=>{
     req.body.id = shortid.generate();
+    var errors = [];
+    if(!req.body.name){
+        errors.push('name is required');
+    } 
+    if(!req.body.phone){
+        errors.push('phone is requried');
+    }
+    if(errors.length){
+        res.render('users/create',{
+            errors: errors,
+            values: req.body//giu lai gia tri moi nhap
+        });
+        return;
+    }
     db.get('users').push(req.body).write();
     res.redirect('/users')
 };
