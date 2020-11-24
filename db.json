@@ -1,27 +1,14 @@
 {
   "users": [
     {
-      "name": "Thinh",
-      "id": "pT7AB0B2k"
-    },
-    {
-      "name": "Bau",
-      "id": "o_HxletLy"
-    },
-    {
       "name": "Pham  Van Thinh",
       "phone": "123445",
       "id": "8uYFmYcQI"
     },
     {
-      "name": "trinh",
+      "name": "Trinh",
       "phone": "1234",
       "id": "fQEytxaDE"
-    },
-    {
-      "name": "dd",
-      "phone": "112344",
-      "id": "abrnV-FR5"
     },
     {
       "name": "Thu",
@@ -29,9 +16,9 @@
       "id": "wnwxHlEd5"
     },
     {
-      "name": "ff",
-      "phone": "ff",
-      "id": "BMIt1Pwk5"
+      "name": "Bau",
+      "phone": "01234",
+      "id": "Wsy6tLIyo"
     }
   ]
 }
