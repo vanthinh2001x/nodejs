@@ -3,6 +3,8 @@ const { render } = require('pug');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');// npm install cookie-parser de doc duoc cookie cho create
 
+var authMiddleware = require('./middlewares/auth.middlewares');
+
 var userRoute = require('./routes/user.route');
 var authRoute = require('./routes/auth.route');
 
@@ -23,7 +25,7 @@ app.get('/',(req,res)=>{
     })
 })
 
-app.use('/users', userRoute);
+app.use('/users', authMiddleware.requireAuth, userRoute);
 app.use('/auth', authRoute);    
 
 app.listen(port,()=>{
